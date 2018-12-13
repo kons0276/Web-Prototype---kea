@@ -1,0 +1,75 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- The Head of the Home Page with Meta Tags & Title -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Exercise Animation</title>
+    <meta name="description" content="">
+    <meta name="title" content="KEA's Login Page">
+    <!-- Link to the css File & Animate CSS Library 3.7.0-->
+    <link href="css/fronter.css" rel="stylesheet">
+    <!-- Link to Google Web Fonts LATO -->
+    <link href="https://fonts.googleapis.com/css?family=Lato" rel="stylesheet">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
+</head>
+<body id="login">
+
+    <!-- The main content of the web page -->
+<main>
+ <!-- Form Here -->
+<form id="form">
+
+    <!-- Big Logo of KEA Here -->
+    <a href="login.html"><img src="images/kea-login.png" id="login-logo" alt="KEA Logo - School Of Design & Technology - Copenhagen"></a>
+    
+    <br>
+    <!-- This is the email input -->
+    <input type="email" name="email" placeholder="Username or Email" id="name" required> 
+    <br><br>
+
+    <!-- This is the password input-->
+    <input type="password" name="password" placeholder="Password" id="password" required> 
+    <br><br>
+    <!-- This is the Submit Button -->
+    <button type="submit" name="submit" id="submit">Log in</button>
+    <a href="login.html"><h6>I forgot my password!</h6></a>
+</form>
+</main>
+
+<script>     
+     
+     let button = document.getElementById("submit");
+
+     button.addEventListener("click", function(event) {  
+         // Stop the default behaviour & run the function
+         event.preventDefault();               
+         goToHome();         
+     });
+
+    // Example Here https://developer.mozilla.org/en-US/docs/Web/API/Window/open   
+    //  Add click Event to the Log In Button
+     function goToHome() {
+        let form = document.getElementById("form");
+        let name = document.getElementById("name");
+        let pass = document.getElementById("password");
+
+    // Required fields
+        name.required = true;
+        pass.required = true;
+
+    // If name and pass is not empty 
+         if (name.value != "" && pass.value != "") {        
+            window.location.replace("home.html");            
+         } else if (name.value == ""){
+             alert("Write your Username or your Email");
+         } else {
+            alert("Write your Password");
+         }
+    }
+
+</script>   
+
+</body>
+</html>

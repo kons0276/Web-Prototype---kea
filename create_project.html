@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- The Head of the Home Page with Meta Tags & Title -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fronter Web Prototype</title>
+    <meta name="description" content="">
+    <meta name="title" content="Fronter Web Prototype">
+    <!-- Link to the css File -->
+    <link href="css/fronter.css" rel="stylesheet">
+    <!-- Link to Google Web Fonts Roboto Light -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <!-- Font Awesome Last Version 5.6.0 -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
+     integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
+</head>
+
+<body>
+
+        <!-- The header area -->
+        <header id="header">
+               <!-- The Navigation Bar / Menu -->
+               <nav id="navbar" class="navbarbox">
+                    <!-- Logo with a link to the Home Page -->           
+                 <a href="home.html"><img src="images/kea.png" id="logo" alt="KEA - Copenhagen School of Design & Technology"></a>
+                 
+                 <ul>
+                    <li><a href="#"><i class="fab fa-rocketchat"></i></a></li>
+                    <li><a href="#"><i class="far fa-bell"></i></a></li>                    
+                 </ul>
+                
+                </nav>
+            </header>    
+           
+            <!-- Menu Example From Evelym S. https://www.linkedin.com/in/evelym-santos/ -->
+             <!-- Menu Icon -->
+            <div class="menuIcon">
+                <span class="icon icon-bars"></span>
+                <span class="icon icon-bars overlay"></span>
+            </div>
+            <!-- Overlay Menu -->
+            <div class="overlay-menu">
+                <!-- <img src="" id="profile" alt="Profile Image"> -->
+                <ul>
+                    <li><a href="home.html">Notifications</a></li>
+                    <li><a href="home.html">News</a></li>
+                    <li><a href="home.html">Profile</a></li>   
+                    <li><a href="home.html">Chat</a></li> 
+                    <li><a href="home.html">MMD</a></li>  
+                    <li><a href="home.html">Portfolio</a></li>    
+                    <li><a href="home.html">Projects</a></li> 
+                    <li><a href="create_project.html">New Project</a></li>  
+                    <li><a href="login.html">Logout</a></li>                     
+                </ul>
+            </div>
+       
+
+        <!-- The main area -->
+        <main id="create-body">
+
+            <h1 id="create-title">START A NEW PROJECT</h1>
+
+            <!-- Personal Project -->           
+            <section id="personal">
+                 <!--  Icon - Font  Awesome Icon -->
+                 <i class="fas fa-user fa-8x"></i>
+                 <!-- Category Title -->
+                 <h2>PERSONAL PROJECT</h2>
+
+            </section>
+
+             <!-- Group Project -->
+            <section id="group">
+
+                 <!--  Icon - Font  Awesome Icon -->
+                 <i class="fas fa-users fa-8x"></i>
+                 <!-- Category Title -->
+                 <h2>GROUP PROJECT</h2>
+            </section>
+
+
+        </main>
+
+        <!-- The footer area -->
+        <footer id="footer">
+
+            <h6>&copy 2018 KEA - All Rights Reserved </h6>
+        </footer>
+ 
+
+<script src="js/menu.js"></script>
+<script>
+        // Add Click Event on the Create Personal Project 
+        let newProject = document.getElementById("personal");
+        newProject.addEventListener("click", function() {
+            window.location.replace("personal_project.html");
+        });
+         
+    </script>
+
+</body>
+</html>

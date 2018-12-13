@@ -1,0 +1,129 @@
+<!DOCTYPE html>
+<html lang="en">
+<!-- The Head of the Home Page with Meta Tags & Title -->
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fronter/KEA's Web Prototype - Personal Project</title>
+    <meta name="description" content="">
+    <meta name="title" content="Fronter/KEA's Web Prototype - Personal Project">
+    <!-- Link to the css File -->
+    <link href="css/fronter.css" rel="stylesheet">
+    <!-- Link to Google Web Fonts Roboto Light -->
+    <link href="https://fonts.googleapis.com/css?family=Roboto:300" rel="stylesheet">
+    <!-- Font Awesome Last Version 5.6.0 -->
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.6.0/css/all.css"
+     integrity="sha384-aOkxzJ5uQz7WBObEZcHvV5JvRW3TUc2rNPA7pe3AwnsUohiw1Vj2Rgx2KSOkF5+h" crossorigin="anonymous">
+    <!-- Favicon -->
+    <link rel="icon" type="image/png" href="images/favicon.png" sizes="32x32">
+</head>
+
+<body>
+
+        <!-- The header area -->
+        <header id="header">
+               <!-- The Navigation Bar / Menu -->
+               <nav id="navbar" class="navbarbox">
+                    <!-- Logo with a link to the Home Page -->           
+                 <a href="home.html"><img src="images/kea.png" id="logo" alt="KEA - Copenhagen School of Design & Technology"></a>
+                 
+                 <ul>
+                    <li><a href="#"><i class="fab fa-rocketchat"></i></a></li>
+                    <li><a href="#"><i class="far fa-bell"></i></a></li>                    
+                 </ul>
+                
+                </nav>
+            </header>    
+           
+            <!-- Menu Example From Evelym S. https://www.linkedin.com/in/evelym-santos/ -->
+             <!-- Menu Icon -->
+            <div class="menuIcon">
+                <span class="icon icon-bars"></span>
+                <span class="icon icon-bars overlay"></span>
+            </div>
+            <!-- Overlay Menu -->
+            <div class="overlay-menu">
+                <!-- <img src="" id="profile" alt="Profile Image"> -->
+                <ul>
+                    <li><a href="home.html">Notifications</a></li>
+                    <li><a href="home.html">News</a></li>
+                    <li><a href="home.html">Profile</a></li>   
+                    <li><a href="home.html">Chat</a></li> 
+                    <li><a href="home.html">MMD</a></li>  
+                    <li><a href="home.html">Portfolio</a></li>    
+                    <li><a href="home.html">Projects</a></li> 
+                    <li><a href="create_project.html">New Project</a></li>  
+                    <li><a href="login.html">Logout</a></li>                     
+                </ul>
+            </div>
+       
+
+        <!-- The main area -->
+        <main id="create-body">
+
+            <h1 id="create-title">PERSONAL PROJECT</h1>
+            <hr>
+
+            <!-- The name of the project -->
+            <form>
+            <label for="title">Title</label> <br><br>
+            <input type="text" id="title" name="title" placeholder="Project Title" required>
+            <br><br>
+
+            <!-- The Dropdown Menu for Private/Public -->
+            <label for="visibility">Visibility: </label>
+            <select name="visibility" id="visibility">
+                <option value="Private">Private</option>
+                <option value="Public">Public</option>                  
+            </select>
+
+            <br><br><br><br>
+            <!-- The Create Project Button -->
+            <button type="submit" name="submit" id="personal">Create Project</button>
+           </form>
+
+           <br><br><br><br><br><br><br><br><br><br>
+        </main>
+
+        <!-- The footer area -->
+        <footer id="footer">
+            <h6>&copy 2018 KEA - All Rights Reserved </h6>
+        </footer>
+ 
+
+<script src="js/menu.js"></script>
+
+<script>
+ 
+//  Find the Button
+ let create = document.getElementById("personal");
+//  Add Click Event Listener
+ create.addEventListener("click", function(event) {
+    // Stop the default behaviour & run the function
+    event.preventDefault();  
+
+    //  Get the Values for title & visibility
+    let title = document.getElementById("title").value;
+    let visibility = document.getElementById("visibility").value;
+
+   // If the Value & the Visibility is not empty, 
+   // run this block of code
+   if (title != "" && visibility != "") {
+
+    // Save the data across browser sessions  ---> https://developer.mozilla.org/en-US/docs/Web/API/Window/localStorage
+        localStorage.setItem("title", title);
+        localStorage.setItem("visibility", visibility);
+
+        // Open the Empty Project
+        window.location.replace("empty_project.html");
+    } else if (visibility == "") {
+        alert("The visibility cannot be empty!");
+    } else {// Show message for the title
+        alert("The title cannot be empty!");
+    }    
+ });
+
+</script>
+
+</body>
+</html>
