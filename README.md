@@ -8,7 +8,7 @@ A simple web prototype for an assignment in KEA.  Uses plain HTML, CSS3 &amp; JS
 - Must be coded with responsive CSS rules.
 - Must be mobile first.
 - Must follow / be based on KEA's design guide.
-- Must have at least one functional user flow with tasks and subtasks: 
-<br>
-  User Flow: Login Page > Home Page > New Project Page > Personal Project Page > Empty Project Page
+- Must have at least one functional user flow with tasks and subtasks:
+
+User Flow: Login Page > Home Page > New Project Page > Personal Project Page > Empty Project Page
 
