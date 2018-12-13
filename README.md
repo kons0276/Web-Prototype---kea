@@ -1,5 +1,5 @@
 # Web-Prototype---kea
-A simple web prototype for an assignment in KEA (School Of Design & Technology).  Uses plain HTML, CSS3 &amp; JS.  
+A simple web prototype for an assignment in KEA (School Of Design & Technology Copenhagen).  Uses plain HTML, CSS3 &amp; JS.  
 
 - Hand coded HTML, CSS, JS hosted on GitHub and your own domain.
 - Must contain at least one form with different input types.
